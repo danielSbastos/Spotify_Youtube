@@ -5,7 +5,7 @@ import urllib.request
 import urllib.parse
 import re
 
-token = input("OAuth Token: ") #"Bearer BQDWxOubOFzx8fjeDi9E3Npt_fd9GiGXVgdiC3tS9LWHgajM3dRe2w3DjVVtjv0ZgHZAKt6zw2cD9PEBcLf-TFxtpOnb89THvPNMH-gbAO9Ho_8eSchxzO7JdaQ1Rg6eLBmzGIPjUp-5NM9Umpk62uKuAwPw7kSB0fb_B1uYdR4YkztfMsW5_OwXJukHyN0Cp2ztHR5V4_-5oFlHuTfPmyDcKZK8yreVwFUZuYB_VMPe_4pNhmu3PwlcePsKel9irRRsw41ly0mk1FcL3XFFHHXMHBHblYEu7hSccB8sqecdVZD9-w7PdcYS"
+token = "Bearer " + input("OAuth Token: ") #"BQDWxOubOFzx8fjeDi9E3Npt_fd9GiGXVgdiC3tS9LWHgajM3dRe2w3DjVVtjv0ZgHZAKt6zw2cD9PEBcLf-TFxtpOnb89THvPNMH-gbAO9Ho_8eSchxzO7JdaQ1Rg6eLBmzGIPjUp-5NM9Umpk62uKuAwPw7kSB0fb_B1uYdR4YkztfMsW5_OwXJukHyN0Cp2ztHR5V4_-5oFlHuTfPmyDcKZK8yreVwFUZuYB_VMPe_4pNhmu3PwlcePsKel9irRRsw41ly0mk1FcL3XFFHHXMHBHblYEu7hSccB8sqecdVZD9-w7PdcYS"
 
 headers = {
         'Accept': 'application/json',
