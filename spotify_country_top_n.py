@@ -11,7 +11,7 @@ headers = {
         'Accept': 'application/json',
         'Authorization': token}
 params = {
-        'country': input("Country: "),
+        'country': input("Country in ISO 3166-1 alpha-2 form: "),
         'limit': input("Maximum number of tracks: "),
         'offset' : input("Mininum number of tracks: ")
         }
