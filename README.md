@@ -7,4 +7,4 @@ Pre-requisites:
  - To gererate an OAuth token, one must have a Spotify account.
  
 Here, https://developer.spotify.com/web-api/console/get-new-releases/, click on "GET OAUTH TOKEN", then, the login screen will 
-and after filling the necessary account information, the token will be avaliable.
+and appear after filling the necessary account information, the token will be avaliable.
