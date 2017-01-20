@@ -42,3 +42,5 @@ def youtube(s):
 for i in albums_name:
     webbrowser.open(youtube(i, videos_time))
     time.sleep(int(videos_time[albums_name.index(i)][0])*60 + int(videos_time[albums_name.index(i)][2:4]))
+
+#
