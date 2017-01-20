@@ -19,7 +19,7 @@ params = {
 r = requests.get('https://api.spotify.com/v1/browse/new-releases', headers=headers, params = params)
 print_json = r.json()
 
-albums_name = []
+albums_name, videos_time = [], []
 
 for i in range(int(params['offset']), int(params['limit'])):
     a = print_json['albums']['items'][i]['name']
@@ -29,7 +29,15 @@ def youtube(s):
     query_string = urllib.parse.urlencode({"search_query" : s})
     html_content = urllib.request.urlopen("http://www.youtube.com/results?" + query_string)
     search_results = re.findall(r'href=\"\/watch\?v=(.{11})', html_content.read().decode())
-    return("http://www.youtube.com/watch?v=" + search_results[0])
+    
+    query_string1 = urllib.parse.urlencode({"search_query" : s})
+    html_content1 = urllib.request.urlopen("http://www.youtube.com/results?" + query_string1)
+    search_results1 = re.findall(r'\d{1}:\d{2}', html_content1.read().decode())
+    videos_time.append(search_results1[0])
+
+    return("http://www.youtube.com/watch?v=" + search_results[0])    
+
 
 for i in albums_name:
-    webbrowser.open(youtube(i))
+    webbrowser.open(youtube(i, videos_time))
+    time.sleep(int(videos_time[albums_name.index(i)][0])*60 + int(videos_time[albums_name.index(i)][2:4]))
