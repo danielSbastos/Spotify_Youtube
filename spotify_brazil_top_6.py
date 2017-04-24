@@ -13,7 +13,7 @@ headers = {
         'Authorization': token}
 params = {
         'country': 'BR',
-        'limit': '6',
+        'limit': '5',
         'offset' : '1'
         }
 
@@ -22,7 +22,7 @@ print_json = r.json()
 
 albums_name, videos_time = [], []
 
-for i in range(6):
+for i in range(5):
     a = print_json['albums']['items'][i]['name']
     albums_name.append(a)
 
